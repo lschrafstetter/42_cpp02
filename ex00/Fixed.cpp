@@ -6,7 +6,7 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:25:31 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/09/23 12:42:48 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/09/23 13:00:34 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Fixed::Fixed() {
 	std::cout << "Default constructor called" << std::endl;
 }
+
 Fixed::~Fixed() {
 	std::cout << "Default destructor called" << std::endl;
 }

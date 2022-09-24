@@ -6,7 +6,7 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:25:31 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/09/23 13:21:03 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/09/23 15:17:55 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,39 @@ Fixed &Fixed::operator=(const Fixed &fixed) {
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed) {
   out << fixed.toFloat();
   return out;
+}
+
+Fixed Fixed::operator+=(const Fixed &rhs) {
+	
+}
+
+Fixed Fixed::operator-=(const Fixed &rhs) {
+	
+}
+
+Fixed Fixed::operator*=(const Fixed &rhs) {
+	
+}
+
+Fixed Fixed::operator/=(const Fixed &rhs) {
+	
+}
+
+inline Fixed operator+(Fixed lhs, const Fixed &rhs) {
+	lhs += rhs;
+	return lhs;
+}
+
+inline Fixed operator-(Fixed lhs, const Fixed &rhs) {
+	
+}
+
+inline Fixed operator*(Fixed lhs, const Fixed &rhs) {
+	
+}
+
+inline Fixed operator/(Fixed lhs, const Fixed &rhs) {
+	
 }
 
 int Fixed::getRawBits(void) const {
