@@ -6,7 +6,7 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:25:35 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/09/23 15:19:49 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/09/25 14:09:50 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ class Fixed {
   Fixed(const float f);
   ~Fixed();
   Fixed(const Fixed& fixed);
-  Fixed& operator=(const Fixed& fixed);
+  Fixed &operator=(Fixed fixed);
+	void swap(Fixed &first, Fixed &second); //normally "friend" swap, but not allowed due to 42 norm
 
   Fixed& operator++();
   Fixed operator++(int);
@@ -53,16 +54,16 @@ class Fixed {
 
 std::ostream& operator<<(std::ostream& out, const Fixed& fixed);
 
-inline bool operator==(const Fixed& lhs, const Fixed& rhs);
-inline bool operator!=(const Fixed& lhs, const Fixed& rhs);
-inline bool operator<(const Fixed& lhs, const Fixed& rhs);
-inline bool operator>(const Fixed& lhs, const Fixed& rhs);
-inline bool operator<=(const Fixed& lhs, const Fixed& rhs);
-inline bool operator>=(const Fixed& lhs, const Fixed& rhs);
+bool operator==(const Fixed &lhs, const Fixed &rhs);
+bool operator!=(const Fixed &lhs, const Fixed &rhs);
+bool operator<(const Fixed &lhs, const Fixed &rhs);
+bool operator>(const Fixed &lhs, const Fixed &rhs);
+bool operator<=(const Fixed &lhs, const Fixed &rhs);
+bool operator>=(const Fixed &lhs, const Fixed &rhs);
 
-inline Fixed operator+(Fixed lhs, const Fixed& rhs);
-inline Fixed operator-(Fixed lhs, const Fixed& rhs);
-inline Fixed operator*(Fixed lhs, const Fixed& rhs);
-inline Fixed operator/(Fixed lhs, const Fixed& rhs);
+Fixed operator+(Fixed lhs, const Fixed &rhs);
+Fixed operator-(Fixed lhs, const Fixed &rhs);
+Fixed operator*(Fixed lhs, const Fixed &rhs);
+Fixed operator/(Fixed lhs, const Fixed &rhs);
 
 #endif
