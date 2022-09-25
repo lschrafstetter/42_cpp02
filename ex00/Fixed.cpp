@@ -6,7 +6,7 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:25:31 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/09/23 13:00:34 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/09/25 12:13:36 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,14 @@ Fixed::Fixed(const Fixed &fixed) {
 	this->raw_value_ = fixed.getRawBits();
 }
 
-Fixed &Fixed::operator=(const Fixed &fixed) {
+void Fixed::swap(Fixed &first, Fixed &second) {
+	std::swap(first.raw_value_, second.raw_value_);
+}
+
+Fixed &Fixed::operator=(Fixed fixed) {
 	std::cout << "Copy assignment operator called" << std::endl;
 	// Copy and swap idiom
-	int new_raw_value = fixed.getRawBits();
-	raw_value_ = new_raw_value;
+	swap(*this, fixed);
 	return *this;
 }
 

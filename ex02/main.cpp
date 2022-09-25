@@ -6,11 +6,12 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:25:23 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/09/25 14:35:23 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/09/25 14:45:20 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <iomanip>
 
 int main(void) {
   std::cout << "--- subject pdf test start ---" << std::endl;

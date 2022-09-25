@@ -6,7 +6,7 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:25:31 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/09/23 13:21:03 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/09/25 12:14:55 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ Fixed::Fixed() {
 }
 
 Fixed::Fixed(const int i) {
+	std::cout << "Int constructor called" << std::endl;
 	this->raw_value_ = i << fractional_bits_;
 }
 
 Fixed::Fixed(const float f) {
+	std::cout << "Float constructor called" << std::endl;
   this->raw_value_ = roundf(f * (1 << this->fractional_bits_));
 }
 
@@ -33,12 +35,15 @@ Fixed::Fixed(const Fixed &fixed) {
   this->raw_value_ = fixed.getRawBits();
 }
 
-Fixed &Fixed::operator=(const Fixed &fixed) {
-  std::cout << "Copy assignment operator called" << std::endl;
-  // Copy and swap idiom
-  int new_raw_value = fixed.getRawBits();
-  raw_value_ = new_raw_value;
-  return *this;
+void Fixed::swap(Fixed &first, Fixed &second) {
+	std::swap(first.raw_value_, second.raw_value_);
+}
+
+Fixed &Fixed::operator=(Fixed fixed) {
+	std::cout << "Copy assignment operator called" << std::endl;
+	// Copy and swap idiom
+	Fixed::swap(*this, fixed);
+	return *this;
 }
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed) {
