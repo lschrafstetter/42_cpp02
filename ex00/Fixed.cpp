@@ -6,13 +6,13 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:25:31 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/09/25 12:13:36 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/09/27 10:11:00 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed() {
+Fixed::Fixed() : raw_value_(0) {
 	std::cout << "Default constructor called" << std::endl;
 }
 
