@@ -6,7 +6,7 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:38:32 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/09/26 18:34:09 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/09/27 09:45:10 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 Point::Point() : x(Fixed(0)) , y(Fixed(0)) {}
 
 Point::Point(const float x, const float y) : x(Fixed(x)) , y(Fixed(y)) {}
+
+Point::Point(const Fixed x, const Fixed y) : x(x) , y(y) {}
 
 Point::Point(const Point &point) : x(point.get_x()) , y(point.get_y()) {}
 

@@ -6,11 +6,11 @@
 #    By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/16 11:44:38 by lschrafs          #+#    #+#              #
-#    Updated: 2022/09/26 18:34:38 by lschrafs         ###   ########.fr        #
+#    Updated: 2022/09/27 09:54:12 by lschrafs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = bsp
 COMPILER = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
